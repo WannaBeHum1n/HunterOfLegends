@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title Home
+    link(rel='stylesheet', type='text/css', href='/css/stylesheet3.css')
+    link(href='https://fonts.googleapis.com/css?family=Ubuntu', rel='stylesheet')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css')
+    link(href='https://fonts.googleapis.com/css?family=Do+Hyeon', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Teko&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Righteous&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Varela+Round&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Karla&display=swap', rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css')
+  body
+    header.tm-header
+      .tm-container2
+        a#mainLogo(href='#') Hunter of Legends
+        .tm-nav2
+          ul
+            li
+              a(href='/users/logout')
+                i.fas.fa-sign-out-alt.fa-lg
+                | Logout
+    .tm-errors
+        != messages('message', locals)
+        if errors
+          each error, i in errors
+            div(class="alert alert-danger") #{error.msg}
+    .tm-content
+      .tm-main
+        .data
+          h2
+            | We are almost there please type your 
+            br
+            | League of Legends account&apos;s name below
+          .pofimg
+          .search
+            form(style='width: 500px;' method="POST" action="/users/pickAcc")
+              input#srch(type='text', name='lolacc', placeholder='Example: Faker, Reckless')
+              br
+              input#srch2(type='submit', value='Search')
+    footer.tm-footer
+      | &copy;2020 fateEvasion. All rights reserved.

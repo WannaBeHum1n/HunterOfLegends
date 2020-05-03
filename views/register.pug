@@ -1,0 +1,55 @@
+doctype html
+head
+  title SignUp
+  link(rel='stylesheet' type='text/css' href='/css/stylesheet2.css')
+  link(href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet')
+  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css')
+  link(href='https://fonts.googleapis.com/css?family=Do+Hyeon' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Teko&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Righteous&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Varela+Round&display=swap' rel='stylesheet')
+header.tm-header
+  .tm-container2
+    a#mainLogo(href='#') Hunter of Legends
+.tm-content
+  h2#title Sign up now
+  .tm-errors
+    != messages('message', locals)
+    if errors
+      each error, i in errors
+        div(class="alert alert-danger") #{error.msg}
+  .tm-errors 
+    p #{duplic}
+  .tm-main
+    .tm-fieldSet
+      form(method='POST', action='/users/register') 
+        input(type='text' name='username' placeholder='What should we call you ?')
+        br
+        input(type='password' name='password' placeholder='Password')
+        br
+        input(type='password' name='password2' placeholder='Confirm password')
+        br
+        input(type='email' name='email' placeholder='Insert a valid email for confirmation')
+        br
+        input#male(type='radio' name='gender' value='male')
+        label(for='male') Male
+        input#female(type='radio' name='gender' value='female')
+        label(for='female') female
+        input#other(type='radio' name='gender' value='other')
+        label(for='other') Non-Binary
+        br
+        .news
+          input#news(type='checkbox' name='newsletter' checked='checked')
+          label(for='news') Sign me up for newsletter!
+        br
+        input#accept(type='checkbox' name='accept' required)
+        label(for='accept')
+          | I have read and I accept 
+          a(href='#') SoftDivision terms &amp; conditions of use.
+        br
+        input(type='submit' name='submit' value='Sign Up')
+        br
+        label(for='login') Already have an account?
+        a#login(href='/users/login') Log in
+footer.tm-footer
+  | &copy;2020 fateEvasion. All rights reserved.

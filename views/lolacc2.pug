@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title Home
+    link(rel='stylesheet', type='text/css', href='/css/stylesheet4.css')
+    link(href='https://fonts.googleapis.com/css?family=Ubuntu', rel='stylesheet')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css')
+    link(href='https://fonts.googleapis.com/css?family=Do+Hyeon', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Teko&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Righteous&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Varela+Round&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Karla&display=swap', rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css')
+  body
+    header.tm-header
+      .tm-container2
+        a#mainLogo(href='#') Hunter of Legends
+        .tm-nav2
+          ul
+            li
+              a(href='/users/logout')
+                i.fas.fa-sign-out-alt.fa-lg
+                | Logout
+    .tm-errors
+        != messages('message', locals)
+        if errors
+          each error, i in errors
+            div(class="alert alert-danger") #{error.msg}
+    .tm-content
+      .tm-main
+        .data
+          h2
+            | Last step just to make sure: 
+            br
+            | is this your league of Legends account ?
+          .pofimg(style=`background-image: url(` + imgLoad + `)`)
+          .search
+            form(style='width: 500px;' method="GET" action="/on")
+              .confirmation
+                .lvl Account name:&nbsp;#{user} &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;Level:&nbsp;#{lvl}  
+              input#srch2(type='submit', value='Confirm')
+              br
+            button.srch3
+              a(style='text-decoration: none; color: white', href='/users/pickAcc') Go back
+    footer.tm-footer
+      | &copy;2020 fateEvasion. All rights reserved.

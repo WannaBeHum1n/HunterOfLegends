@@ -1,0 +1,119 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body, html{
+	height: 100%;
+}
+body{
+	background: white;
+}
+.tm-header{
+	background-color: #000;
+}
+.tm-errors {
+  color: white;
+  background-color: #bf340d;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 0;
+  min-width: 100%;
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Teko', sans-serif;
+}
+.tm-header::after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.tm-container{
+	max-width: 1600px;
+	margin: 0px auto;
+	min-height: 100%;
+}
+#mainLogo {
+	font-family: 'Teko', sans-serif;
+	font-size: 2.6em;
+	text-decoration: none;
+	color: #c4831a;
+	line-height: 80px;
+}
+.auth {
+	float: right;
+}
+.auth li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+}
+.auth li a{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	background-color: green;
+	line-height: 80px;
+	border-radius: 8px;
+	font-family: 'Righteous', cursive;
+}
+/*Footer & Page sizing starts*/
+.tm-footer{
+	position: relative;
+	background: #000;
+	text-align: center;
+	padding: 20px;
+	color: white;
+	margin-top: -20px;
+	height: 20px;
+	clear: both;
+}
+.tm-content{
+	min-height: 100%;
+	max-width: 1000px;
+	margin: 0px auto;
+}
+.tm-main{
+	overflow: hidden;
+}
+/*Footer & Page sizing ends*/
+.intro {
+	background-image: url(../pictures/intro3.png);
+	background-size: cover;
+	width: 100%;
+	height: 900px;
+}
+.innerbox {
+	width: 1200px;
+	background-color: transparent;
+	margin: 0px auto;
+	font-family: 'Varela Round', sans-serif;
+	color: white;
+	font-size: 2.2em;
+	padding: 50px;
+	border-radius: 15px;
+}
+.putas {
+	background-color: transparent;
+	width: 1250px;
+	margin: 0px auto;
+	padding-top: 200px;
+}
+.start {
+	color: white;
+	padding: 20px;
+	font-size: 1.2em;
+	font-family: 'Righteous', cursive;
+	background-color: #c4831a;
+	margin-left: 880px;
+	margin-top: 100px;
+	display: inline-block;
+	border-radius: 20px;
+	text-decoration: none;
+}
+#logout{
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	background-color: red;
+	position: absolute;
+}
